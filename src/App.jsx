@@ -8,9 +8,11 @@ import Welcome from "./components/Welcome.jsx"
 import SavingInvesting from "./components/SavingInvesting.jsx"
 import InvestmentJourney from "./components/InvestmentJourney.jsx"
 import InvestSafely from "./components/InvestSafely.jsx"
+import Introduction from "./components/Introduction.jsx"
 
 export default function App() {
   const sections = [
+    <Introduction />,
     <Welcome />,
     <SavingInvesting />,
     <InvestmentJourney />,

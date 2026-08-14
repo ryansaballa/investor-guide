@@ -78,10 +78,6 @@ header {
   padding: 2em;
 }
 
-section {
-  height: 500px;
-}
-
 /* Progress Bar */
 .progress-bar {
   position: fixed;
