@@ -1,9 +1,13 @@
 import { useState } from "react"
 export default function InvestSafely() {
-  const [openCard, setOpenCard] = useState(null)
+  const [openCard, setOpenCard] = useState([])
 
   const toggleCard = (card) => {
-    setOpenCard(openCard === card ? null : card)
+    setOpenCard((prev) =>
+      prev.includes(card)
+        ? prev.filter((item) => item !== card)
+        : [...prev, card],
+    )
   }
 
   return (
@@ -11,12 +15,12 @@ export default function InvestSafely() {
       <h2>Invest Safely </h2>
       <div className="cards">
         <article
-          className={`card${openCard === "rich" ? "card--open" : ""}`}
+          className={`card${openCard.includes("rich") ? "card--open" : ""}`}
           onClick={() => toggleCard("rich")}
         >
           <h3>Get Rich Quick</h3>
 
-          {openCard === "rich" && (
+          {openCard.includes("rich") && (
             <div className="card-details">
               <p>
                 Promises of quick and easy returns or ‘get rich quick’
@@ -27,6 +31,25 @@ export default function InvestSafely() {
                 Be cautious of investments that promise high returns with little
                 or no risk. Legitimate investments generally involve some level
                 of uncertainty.
+              </p>
+            </div>
+          )}
+        </article>
+        <article
+          className={`card ${openCard.includes("community") ? "card--open" : ""}`}
+          onClick={() => toggleCard("community")}
+        >
+          <h3>Trusted Community</h3>
+          {openCard.includes("community") && (
+            <div className="card-details">
+              <p>
+                Building trusted relationships takes time. Connecting with
+                people in your community can create opportunities to share
+                ideas, experiences, and practical insights.
+              </p>
+              <p>
+                Having trusted people nearby can offer reassurance and support
+                when navigating new or unfamiliar situations.
               </p>
             </div>
           )}
