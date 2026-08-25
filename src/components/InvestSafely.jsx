@@ -54,6 +54,47 @@ export default function InvestSafely() {
             </div>
           )}
         </article>
+        <article
+          className={`card ${
+            openCard.includes("language") ? "card--open" : ""
+          }`}
+          onClick={() => toggleCard("langage")}
+        >
+          <h3>Unclear and Unfamiliar Language</h3>
+          {openCard.includes("langage") && (
+            <div className="card-details">
+              <p>
+                Scammers may use complex or unfamiliar language to make an
+                investment opportunity harder to understand.
+              </p>
+              <p>
+                Take your time, ask questions, and make sure you understand the
+                investment before making a decision.
+              </p>
+            </div>
+          )}
+        </article>
+        <article
+          className={`card ${
+            openCard.includes("connections") ? "card--open" : ""
+          }`}
+          onClick={() => toggleCard("connections")}
+        >
+          <h3>Shared Connections</h3>
+          {openCard.includes("connections") && (
+            <div className="card-details">
+              <p>
+                Scammers may try to build trust by emphasizing a shared
+                background, community, location, workplace, or other connection.
+              </p>
+              <p>
+                A familiar connection does not necessarily mean an investment
+                opportunity is trustworthy, so take time to verify the person
+                and the opportunity independently.
+              </p>
+            </div>
+          )}
+        </article>
       </div>
     </section>
   )
