@@ -11,12 +11,15 @@ export default function NavigationButton({
       >
         Previous
       </button>
-      <button
+      {currentSection !== totalSections -1 && (
+<button
         disabled={currentSection === totalSections - 1}
         onClick={() => setCurrentSection((prev) => prev + 1)}
       >
         Next
       </button>
+      )}
+      
     </div>
   )
 }
