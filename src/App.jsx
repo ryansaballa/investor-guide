@@ -9,14 +9,24 @@ import SavingInvesting from "./components/SavingInvesting.jsx"
 import InvestmentJourney from "./components/InvestmentJourney.jsx"
 import InvestSafely from "./components/InvestSafely.jsx"
 import Introduction from "./components/Introduction.jsx"
+import Summary from "./components/Summary.jsx"
 
 export default function App() {
+  const [checklist, setChecklist] = useState({
+    affordInvest: false,
+    diversifyInvest: false,
+    investLong: false,
+    understandRisk: false,
+    understandInvest: false,
+  })
+
   const sections = [
     <Introduction />,
     <Welcome />,
-    <SavingInvesting />,
+    <SavingInvesting checklist={checklist} setChecklist={setChecklist} />,
     <InvestmentJourney />,
     <InvestSafely />,
+    <Summary checklist={checklist} />,
   ]
 
   const [currentSection, setCurrentSection] = useState(0)

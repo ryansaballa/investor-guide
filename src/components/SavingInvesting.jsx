@@ -1,6 +1,5 @@
 import { useState } from "react"
-
-export default function SavingInvesting() {
+export default function SavingInvesting({ checklist, setChecklist }) {
   const [selected, setSelected] = useState("saving")
 
   const content = {
@@ -22,20 +21,37 @@ export default function SavingInvesting() {
     },
   }
 
-  const [checklist, setChecklist] = useState({
-    affordInvest: false,
-    diversifyInvest: false,
-    investLong: false,
-    understandRisk: false,
-    understandInvest: false,
-  })
-
   const handleChange = (field, value) => {
     setChecklist((prev) => ({
       ...prev,
       [field]: value,
     }))
   }
+
+  const checklistItems = [
+    {
+      key: "affordInvest",
+      label: "Invest What's Left",
+    },
+    {
+      key: "diversifyInvest",
+      label: "Diversifying Your Investments",
+    },
+    {
+      key: "investLong",
+      label: "Investing For the Long-term",
+    },
+    {
+      key: "understandRisk",
+      label: "Understanding Risk and Returns",
+    },
+    {
+      key: "understandInvest",
+      label: "Understanding Investments",
+    },
+  ]
+
+  const selectedItems = checklistItems.filter((item) => checklist[item.key])
 
   return (
     <>
