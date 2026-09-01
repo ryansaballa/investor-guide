@@ -3,25 +3,35 @@ export default function Summary({ checklist }) {
     {
       key: "affordInvest",
       label: "Invest What's Left",
+      description: "this is an example",
+      link: "https://wwww.ciro.ca",
     },
     {
       key: "diversifyInvest",
       label: "Diversifying Your Investments",
+      description: "",
+      link: "",
     },
     {
       key: "investLong",
       label: "Investing For the Long-term",
+      description: "",
+      link: "",
     },
     {
       key: "understandRisk",
       label: "Understanding Risk and Returns",
+      description: "",
+      link: "",
     },
     {
       key: "understandInvest",
       label: "Understanding Investments",
+      description: "",
+      link: "",
     },
-  ];
-  const selectedItems = checklistItems.filter((item) => checklist[item.key]);
+  ]
+  const selectedItems = checklistItems.filter((item) => checklist[item.key])
 
   return (
     <section className="summary">
@@ -29,11 +39,16 @@ export default function Summary({ checklist }) {
       <h3>Continue Learning on How to Invest Safely</h3>
 
       {selectedItems.length > 0 ? (
-        <ul>
+        <>
+          <ul>
+            {selectedItems.map((item) => (
+              <li key={item.key}>{item.label}</li>
+            ))}
+          </ul>
           {selectedItems.map((item) => (
-            <li key={item.key}>{item.label}</li>
+            <p key={`${item.key}-description`}>{item.description}</p>
           ))}
-        </ul>
+        </>
       ) : (
         <p>
           Explore more about the basics of investing, understanding risk,
@@ -68,5 +83,5 @@ export default function Summary({ checklist }) {
         </div>
       </div>
     </section>
-  );
+  )
 }
