@@ -25,13 +25,13 @@
 
 body {
   margin: 0;
+  padding: 0;
 }
 
 #root {
   width: 1126px;
   max-width: 100%;
   margin: 0 auto;
-  text-align: center;
   border-inline: 1px solid var(--border);
   min-height: 100svh;
   box-sizing: border-box;
@@ -45,8 +45,9 @@ h2 {
 }
 
 h1 {
-  font-size: 56px;
+  font-size: 42px;
   letter-spacing: -1.68px;
+  line-height: 1.6;
   margin: 32px 0;
   @media (max-width: 1024px) {
     font-size: 32px;
@@ -55,27 +56,36 @@ h1 {
 }
 h2 {
   font-size: 24px;
-  line-height: 118%;
+  line-height: 1.6;
   letter-spacing: -0.24px;
   margin: 0 0 8px;
   @media (max-width: 1024px) {
     font-size: 20px;
   }
 }
+h3 {
+  font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: -0.24px;
+  margin: 0 0 8px;
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+}
 p {
   margin: 0;
+  padding-bottom: 0.35em;
+  line-height: 1.6;
+}
+
+li {
+  margin: 0;
+  line-height: 1.6;
+  padding-left: 0;
 }
 
 .logo {
   width: 250px;
-}
-
-header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 2em;
 }
 
 /* Progress Bar */
@@ -97,6 +107,21 @@ header {
   transition: width 0.3s ease;
 }
 
+/* Main Layout */
+section {
+  padding: 0.5em;
+}
+
+/* Introduction */
+.main-intro {
+  grid-template: 1fr;
+  gap: 2em;
+}
+
+.about-ooti {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
 /* Saving Investing - opacity button */
 .greyed-out {
   opacity: 0.5;
