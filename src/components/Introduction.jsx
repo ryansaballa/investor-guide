@@ -2,15 +2,13 @@ export default function Introduction() {
   return (
     <>
       <section className="introduction">
-        <h2>Canadian Investment Regulatory Organization</h2>
+        <h2>Office of the Investor</h2>
         <div className="main-intro">
           <div className="about-ciro">
             <div>
               <p>
-                We are committed to the protection of investors, providing
-                efficient and consistent regulation, and building Canadians’
-                trust in financial regulation and the people managing their
-                investments.
+                We are committed to the protection of investors and building
+                Canadians’ trust in managing their investments.
               </p>
             </div>
             <div>
@@ -22,7 +20,7 @@ export default function Introduction() {
           </div>
           <div className="about-ooti">
             <div>
-              <h3>Office of the Investor Mandate</h3>
+              <h3>Mandate</h3>
               <ul>
                 <li>Support policy development</li>
                 <li>Educate investors</li>
@@ -34,8 +32,7 @@ export default function Introduction() {
             <div>
               <h3>Contact</h3>
               <p>
-                To inquire about our outreach sessions or connect with us on
-                investor education or outreach initiatives, please contact us
+                Connect with us on investor education or outreach initiatives
                 at:&nbsp;
                 <a href="mailto:officeoftheinvestor@ciro.ca" target="_self">
                   officeoftheinvestor@ciro.ca

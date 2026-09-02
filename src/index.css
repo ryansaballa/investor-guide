@@ -1,5 +1,5 @@
 :root {
-  --text: #6b6375;
+  --text: #08060d;
   --text-h: #08060d;
   --bg: #fff;
   --border: #e5e4e7;
@@ -84,6 +84,10 @@ li {
   padding-left: 0;
 }
 
+a {
+  color: #023737;
+}
+
 .logo {
   width: 250px;
 }
@@ -107,6 +111,44 @@ li {
   transition: width 0.3s ease;
 }
 
+/* Next and Previous Buttons */
+.navigation {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 12px;
+  margin-top: 1rem;
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: #f9f7f6;
+  border: #f0ece8;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 0;
+}
+
+.nav-button:hover {
+  background-color: #a8c208;
+  transform: 0.5s ease;
+}
+
+.nav-button--start {
+  width: 120px;
+  height: 36px;
+  background-color: #a8c208;
+  border-radius: 3.125rem;
+  padding: 0.5rem 1rem;
+}
+
+.nav-button:hover {
+  opacity: 80%;
+}
+
 /* Main Layout */
 section {
   padding: 0.5em;
@@ -121,6 +163,15 @@ section {
 .about-ooti {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  margin: 1em 0;
+  gap: 1em;
+}
+
+.about-ooti > div {
+  background-color: #f9f7f6;
+  border: 1px solid #f0ece8;
+  border-radius: 1rem;
+  padding: 1em;
 }
 /* Saving Investing - opacity button */
 .greyed-out {
