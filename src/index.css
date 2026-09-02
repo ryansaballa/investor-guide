@@ -156,15 +156,10 @@ section {
 
 /* Introduction */
 .main-intro {
-  grid-template: 1fr;
-  gap: 2em;
-}
-
-.about-ooti {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  margin: 1em 0;
-  gap: 1em;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+  justify-content: center;
 }
 
 .about-ooti > div {
