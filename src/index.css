@@ -78,6 +78,10 @@ p {
   line-height: 1.6;
 }
 
+ul {
+  margin: 1em;
+}
+
 li {
   margin: 0;
   line-height: 1.6;
@@ -150,6 +154,17 @@ a {
 }
 
 /* Main Layout */
+.investor-guide {
+  position: relative;
+  min-height: 100vh;
+}
+
+.content-wrapper {
+  width: 100%;
+  max-width: 1126px;
+  margin: 0 auto;
+}
+
 section {
   padding: 0.5em;
 }
@@ -157,16 +172,22 @@ section {
 /* Introduction */
 .main-intro {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: 2em;
   justify-content: center;
+  align-items: stretch;
 }
 
 .about-ooti > div {
   background-color: #f9f7f6;
   border: 1px solid #f0ece8;
   border-radius: 1rem;
-  padding: 1em;
+  padding: 2em;
+}
+
+.ooti-connect > div {
+  padding: 2em;
+  align-items: stretch;
 }
 /* Saving Investing - opacity button */
 .greyed-out {
