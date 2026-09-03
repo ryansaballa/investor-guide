@@ -32,20 +32,20 @@ export default function App() {
   const [currentSection, setCurrentSection] = useState(0)
 
   return (
-    <>
+    <main className="investor-guide">
       <section>
         <ProgressBar
           currentSection={currentSection}
           totalSections={sections.length}
         />
         <Header />
-        {sections[currentSection]}
+        <div className="content-wrapper">{sections[currentSection]}</div>
         <Navigation
           currentSection={currentSection}
           setCurrentSection={setCurrentSection}
           totalSections={sections.length}
         />
       </section>
-    </>
+    </main>
   )
 }
