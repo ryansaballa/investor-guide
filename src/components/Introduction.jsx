@@ -6,20 +6,6 @@ export default function Introduction() {
         <div className="main-intro">
           <div className="about-ciro">
             <div>
-              <p>
-                We are committed to the protection of investors and building
-                Canadians’ trust in managing their investments.
-              </p>
-            </div>
-            <div>
-              <p>
-                This guide will walk through your investment options and how you
-                can protect yourself from scams.
-              </p>
-            </div>
-          </div>
-          <div className="about-ooti">
-            <div>
               <h3>Mandate</h3>
               <ul>
                 <li>Support policy development</li>
@@ -30,7 +16,9 @@ export default function Introduction() {
               </ul>
             </div>
             <div>
-              <h3>Contact</h3>
+              <p>
+                <strong>Contact</strong>
+              </p>
               <p>
                 Connect with us on investor education or outreach initiatives
                 at:&nbsp;
@@ -41,8 +29,20 @@ export default function Introduction() {
               </p>
             </div>
           </div>
+          <div className="about-ooti">
+            <div>
+              <p>
+                We are committed to the protection of investors and building
+                Canadians’ trust in managing their investments.
+              </p>
+              <p>
+                This guide will walk through your investment options and how you
+                can protect yourself from scams.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
     </>
-  )
+  );
 }
