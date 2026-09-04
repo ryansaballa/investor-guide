@@ -1,15 +1,15 @@
-import { useState } from "react"
+import { useState } from "react";
 
-import Header from "./components/Header.jsx"
-import ProgressBar from "./components/ProgressBar.jsx"
-import Navigation from "./components/NavigationButton.jsx"
+import Header from "./components/Header.jsx";
+import ProgressBar from "./components/ProgressBar.jsx";
+import Navigation from "./components/NavigationButton.jsx";
 
-import Welcome from "./components/Welcome.jsx"
-import SavingInvesting from "./components/SavingInvesting.jsx"
-import InvestmentJourney from "./components/InvestmentJourney.jsx"
-import InvestSafely from "./components/InvestSafely.jsx"
-import Introduction from "./components/Introduction.jsx"
-import Summary from "./components/Summary.jsx"
+import Welcome from "./components/Welcome.jsx";
+import SavingInvesting from "./components/SavingInvesting.jsx";
+import InvestmentJourney from "./components/InvestmentJourney.jsx";
+import InvestSafely from "./components/InvestSafely.jsx";
+import Introduction from "./components/Introduction.jsx";
+import Summary from "./components/Summary.jsx";
 
 export default function App() {
   const [checklist, setChecklist] = useState({
@@ -18,7 +18,7 @@ export default function App() {
     investLong: false,
     understandRisk: false,
     understandInvest: false,
-  })
+  });
 
   const sections = [
     <Introduction />,
@@ -27,18 +27,18 @@ export default function App() {
     <InvestmentJourney />,
     <InvestSafely />,
     <Summary checklist={checklist} />,
-  ]
+  ];
 
-  const [currentSection, setCurrentSection] = useState(0)
+  const [currentSection, setCurrentSection] = useState(0);
 
   return (
     <main className="investor-guide">
       <section>
+        <Header />
         <ProgressBar
           currentSection={currentSection}
           totalSections={sections.length}
         />
-        <Header />
         <div className="content-wrapper">{sections[currentSection]}</div>
         <Navigation
           currentSection={currentSection}
@@ -47,5 +47,5 @@ export default function App() {
         />
       </section>
     </main>
-  )
+  );
 }

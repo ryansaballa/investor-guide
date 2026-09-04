@@ -42,6 +42,7 @@ h2 {
   font-family: var(--heading);
   font-weight: 500;
   color: var(--text-h);
+  margin-bottom: 0.5em;
 }
 
 h1 {
@@ -79,7 +80,7 @@ p {
 }
 
 ul {
-  margin: 1em;
+  margin-top: 0;
 }
 
 li {
@@ -90,6 +91,10 @@ li {
 
 a {
   color: #023737;
+}
+
+input {
+  margin-right: 0.65em;
 }
 
 .logo {
@@ -170,26 +175,87 @@ section {
 }
 
 /* Introduction */
-.main-intro {
+.main-intro,
+.toggle-definitions,
+.investing {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: 1fr;
   gap: 2em;
   justify-content: center;
-  align-items: stretch;
+  align-items: start;
 }
 
-.about-ooti > div {
+.about-ooti,
+.investing-checkbox {
   background-color: #f9f7f6;
   border: 1px solid #f0ece8;
   border-radius: 1rem;
   padding: 2em;
 }
 
-.ooti-connect > div {
-  padding: 2em;
-  align-items: stretch;
+.ooti-guide {
+  padding: 0 2em 2em 2em;
 }
 /* Saving Investing - opacity button */
 .greyed-out {
   opacity: 0.5;
+}
+
+/* Welcome */
+.description {
+  margin-top: 0.25em;
+}
+
+/*Saving Investing */
+
+.definition-buttons > button {
+  width: 150px;
+  height: 150px;
+  border: 1px solid #e5e4e7;
+  border-radius: 1rem;
+  color: #08060d;
+  margin: 1em;
+}
+
+.definition-buttons > button:hover {
+  background-color: #a8c208;
+}
+
+.definition-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.definitions-card {
+  background-color: #f9f7f6;
+  border: 1px solid #f0ece8;
+  border-radius: 1rem;
+  padding: 2em;
+}
+
+.investing {
+  margin-top: 1em;
+}
+.investing-checkbox label {
+  font-weight: 600;
+}
+
+.investing-checkbox p {
+  margin-left: 1.7em;
+}
+
+/* Media Query - Mobile */
+
+@media (min-width: 768px) {
+  .main-intro,
+  .toggle-definitions,
+  .investing {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .ooti-guide {
+    padding: 2em;
+  }
+  .toggle-definitions {
+    min-height: 300px;
+  }
 }
