@@ -81,7 +81,7 @@ p {
 
 ul {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 1em;
   padding-left: 1em;
 }
 
@@ -197,6 +197,7 @@ section {
 
 .ooti-guide {
   padding: 0 2em 2em 2em;
+  gap: 1em;
 }
 /* Saving Investing - opacity button */
 .greyed-out {
@@ -285,6 +286,10 @@ section {
 
 .accordion-desc {
   margin-left: 2em;
+}
+
+.accordion-desc ul {
+  margin-bottom: 0;
 }
 
 /* Invest Safely */
