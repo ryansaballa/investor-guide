@@ -48,7 +48,7 @@ export default function Summary({ checklist }) {
         <ul>
           {selectedItems.map((item) => (
             <li key={item.key}>
-              <a href="${item.link}">{item.label}</a>: {item.description}
+              <a href={item.link}>{item.label}</a>: {item.description}
             </li>
           ))}
         </ul>
