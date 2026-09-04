@@ -12,10 +12,14 @@ export default function InvestSafely() {
 
   return (
     <section className="investSafely">
-      <h2>Invest Safely </h2>
+      <h2>Invest Safely</h2>
+      <p>
+        Select each topic to learn more about investing safely and protecting
+        yourself as an investor:
+      </p>
       <div className="cards">
         <article
-          className={`card${openCard.includes("rich") ? "card--open" : ""}`}
+          className={`card ${openCard.includes("rich") ? "card--open" : ""}`}
           onClick={() => toggleCard("rich")}
         >
           <h3>Get Rich Quick</h3>
@@ -58,10 +62,10 @@ export default function InvestSafely() {
           className={`card ${
             openCard.includes("language") ? "card--open" : ""
           }`}
-          onClick={() => toggleCard("langage")}
+          onClick={() => toggleCard("language")}
         >
           <h3>Unclear and Unfamiliar Language</h3>
-          {openCard.includes("langage") && (
+          {openCard.includes("language") && (
             <div className="card-details">
               <p>
                 Scammers may use complex or unfamiliar language to make an

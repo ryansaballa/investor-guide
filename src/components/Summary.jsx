@@ -59,6 +59,7 @@ export default function Summary({ checklist }) {
           <a href="https://wwww.ciro.ca/office-investor">
             Office of the Investor
           </a>
+          .
         </p>
       )}
     </section>
